@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="lib/img/logoredondo.png">
+  <title>Proceso de los Candidatos</title>
+  <link rel="stylesheet" href="lib/css/perfilReclutador.css" />
+  <link rel="stylesheet" href="lib/css/procesoCa.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div class="main-layout">
+  <header class="main-header">
+    <a href="perfilReclutador.html" class="header-left" style="text-decoration: none; color: inherit;">
+      <img src="lib/img/logo.jpg" alt="Logo" />
+      <span class="title">TalentCheck</span>
+    </a>
+    <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="#" id="logoutBtn">Cerrar sesión</a>
+        <a href="perfilRe.html">Ver Perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="nav">
+        <a href="perfilReclutador.html"><button class="nav-btn"><i class="fas fa-home"></i></button></a>
+        <a href="candidatos.html"><button class="nav-btn"><i class="fas fa-user-friends"></i></button></a>
+        <a href="generarReporte.html"><button class="nav-btn"><i class="fas fa-chart-bar"></i></button></a>
+        <a href="entrevista.html"><button class="nav-btn"><i class="fas fa-comments"></i></button></a>
+      </nav>
+    </aside>
+
+    <main style="flex: 1; padding: 1rem;" id="candidatosContainerWrapper">
+      <center><h1 style="font-size: 2rem; margin-bottom: 1rem; color: #2c3e50;">Proceso de los Candidatos</h1></center>
+      <div id="candidatosContainer"></div>
+    </main>
+
+  </div>
+</div>
+<script type="module" src="lib/js/procesoCa.js"></script>
+</body>
+</html>

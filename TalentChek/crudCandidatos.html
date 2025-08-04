@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="lib/img/logoredondo.png">
+  <title>Candidatos</title>
+  <link rel="stylesheet" href="lib/css/perfilReclutador.css" />
+  <link rel="stylesheet" href="lib/css/crudCandidatos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div class="main-layout">
+  <header class="main-header">
+    <a href="perfilAdm.html" class="header-left">
+      <img src="lib/img/logo.jpg" alt="Logo" />
+      <span class="title">TalentCheck</span>
+    </a>
+    <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="#" id="logoutBtn">Cerrar sesión</a>
+        <a href="perfilAd.html">Ver Perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="nav">
+        <a href="crudCandidatos.html"><button class="nav-btn"><i class="fas fa-user"></i></button></a>
+        <a href="crudReclutadores.html"><button class="nav-btn"><i class="fas fa-user-tie"></i></button></a>
+        <a href="crudClavesCono.html"><button class="nav-btn"><i class="fas fa-clipboard-check"></i></button></a>
+        <a href="crudClavesPsico.html"><button class="nav-btn"><i class="fas fa-brain"></i></button></a>
+      </nav>
+    </aside>
+
+    <main class="panel">
+      <section class="panel-content">
+        <center><h1>Gestión de Candidatos</h1></center><br>
+        <form id="addEmailForm" onsubmit="event.preventDefault(); openAddModal();">
+          <button type="submit">Agregar</button>
+        </form>
+        <table id="tablaCorreos">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Correo</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- Modales -->
+<div class="modal-backdrop" id="modalAdd">
+  <div class="modal">
+    <p>Ingrese el nuevo correo:</p>
+    <input id="modalAddInput" type="email" placeholder="correo@ejemplo.com">
+    <div class="modal-buttons">
+      <button class="modal-button accept" id="modalAddAccept">Aceptar</button>
+      <button class="modal-button cancel" id="modalAddCancel">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modalEdit">
+  <div class="modal">
+    <p>Editar correo:</p>
+    <input id="modalEditInput" type="email" placeholder="correo@ejemplo.com">
+    <div class="modal-buttons">
+      <button class="modal-button accept" id="modalEditAccept">Guardar</button>
+      <button class="modal-button cancel" id="modalEditCancel">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="modalDelete">
+  <div class="modal">
+    <p>¿Seguro que desea eliminar este correo?</p>
+    <div class="modal-buttons">
+      <button class="modal-button accept" id="modalDeleteAccept">Sí</button>
+      <button class="modal-button cancel" id="modalDeleteCancel">No</button>
+    </div>
+  </div>
+</div>
+
+
+<script type="module" src="lib/js/crudCandidatos.js"></script>
+
+</body>
+</html>

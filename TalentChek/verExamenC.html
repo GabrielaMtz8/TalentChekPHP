@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="lib/img/logoredondo.png">
+  <title>Examen de Conocimiento</title>
+  <link rel="stylesheet" href="lib/css/verExamen.css" />
+  <link rel="stylesheet" href="lib/css/perfilCandidato.css"/>
+  <link rel="stylesheet" href="lib/css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="main-layout">
+    <header class="main-header">
+    <a href="perfilReclutador.html" class="header-left">
+      <img src="lib/img/logo.jpg" alt="Logo" />
+      <span class="title">TalentCheck</span>
+    </a>
+    <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="lib/php/cerrarSesion.php">Cerrar sesión</a>
+        <a href="perfilRe.html">Ver Perfil</a>
+      </div>
+    </div>
+  </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <nav class="nav">
+          <a href="perfilReclutador.html"><button class="nav-btn"><i class="fas fa-home"></i></button></a>
+          <a href="candidatos.html"><button class="nav-btn"><i class="fas fa-user-friends"></i></button></a>
+          <a href="generarReporte.html"><button class="nav-btn"><i class="fas fa-chart-bar"></i></button></a>
+          <a href="entrevista.html"><button class="nav-btn"><i class="fas fa-comments"></i></button></a>
+        </nav>
+      </aside>
+
+      <main>
+        <center><h1 style="font-size: 2rem; margin-bottom: 1rem; color: #2c3e50;">Respuestas del Examen de Conocimiento</h1></center>
+        <div id="candidatosContainer"></div>
+      </main>
+    </div>
+  </div>
+
+  <script src="lib/js/verExamenC.js"></script>
+  <script src="lib/js/menuDespegable.js"></script>
+</body>
+</html>

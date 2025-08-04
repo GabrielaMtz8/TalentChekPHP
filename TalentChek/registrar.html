@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="lib/img/logoredondo.png" />
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="lib/css/registrar.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <a href="index.html" style="text-decoration: none; color: inherit">
+          <div class="logo">
+            <img src="lib/img/logo.jpg" alt="Check icon" />
+            <span class="nomSistema">TalentCheck</span>
+          </div>
+        </a>
+
+        <h2>Crear Cuenta</h2>
+
+        <!-- Nuevo formulario conectado con PHP -->
+        <form id="registroForm" action="lib/php/registrar.php" method="POST">
+          <input type="text" id="nombre" name="nombre" placeholder="NOMBRE COMPLETO" required />
+          <input type="email" id="cue" name="cue" placeholder="CUE" required />
+          <input type="password" id="match" name="match" placeholder="MATCH" required />
+
+          <button type="submit" id="registro">Registrar</button>
+          <div class="login-inline">
+            <p>¿Ya tienes cuenta?</p>
+            <a href="inicioSesion.html">Iniciar sesión</a>
+          </div>
+        </form>
+      </div>
+      <div class="illustration">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+          alt="User Illustration"
+        />
+      </div>
+    </div>
+  </body>
+</html>

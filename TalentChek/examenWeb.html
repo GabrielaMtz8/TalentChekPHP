@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="lib/img/logoredondo.png" />
+    <title>Examen de Conocimiento</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="lib/css/examenCono.css" />
+  </head>
+  <body>
+    <div class="main-layout">
+    <header class="main-header">
+      <a href="perfilCandidato.html" class="header-left">
+        <img src="lib/img/logo.jpg" alt="Logo" />
+        <span class="title">TalentCheck</span>
+      </a>
+       <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="lib/php/cerrarSesion.php">Cerrar sesión</a>
+        <a href="perfil.html">Ver Perfil</a>
+      </div>
+      </div>
+    </header>
+
+      <div class="container">
+        <aside class="sidebar">
+          <nav class="nav">
+            <a href="perfilCandidato.html"
+              ><button class="nav-btn"><i class="fas fa-home"></i></button
+            ></a>
+           
+            <a href="examenCono.php"
+              ><button class="nav-btn">
+                <i class="fas fa-clipboard-list"></i></button
+            ></a>
+            <a href="examenPsico.html"
+              ><button class="nav-btn"><i class="fas fa-brain"></i></button
+            ></a>
+          </nav>
+        </aside>
+
+        <main class="exam-content">
+          <!-- Video de cámara -->
+          <div id="video-container">
+            <video id="video" width="100" height="80" autoplay muted></video>
+          </div>
+
+          <!-- Paso: Introducción -->
+          <section class="intro-section" id="intro">
+            <div class="robot-box">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png"
+                class="robot-img"
+                alt="Robot"
+              />
+            </div>
+            <h2>Evaluación de Conocimiento</h2>
+            <button class="camera-btn" id="camara" onclick="activarCamara()">
+              <i class="fas fa-video"></i> Encender cámara
+            </button>
+            <button
+              class="start-btn"
+              id="startBtn"
+              onclick="startEvaluation()"
+              disabled
+            >
+              Iniciar evaluación
+            </button>
+            <p class="camera-warning">
+              * Debes permitir el acceso a la cámara para comenzar el examen.
+            </p>
+          </section>
+
+          <!-- Paso 1 -->
+          <section class="question-section" id="step-1" style="display: none">
+            <div class="question">
+              <p>
+                <strong
+                  >1. ¿Cuál de los siguientes elementos HTML se usa para
+                  insertar una imagen?</strong
+                >
+              </p>
+              <label><input type="radio" name="q1" value="img" /> img</label>
+              <label
+                ><input type="radio" name="q1" value="image" /> image</label
+              >
+              <label><input type="radio" name="q1" value="src" /> src</label>
+              <label><input type="radio" name="q1" value="pic" /> pic</label>
+            </div>
+            <div class="question">
+              <p>
+                <strong
+                  >2. ¿Cuál de estos frameworks es de JavaScript y se utiliza
+                  para construir interfaces de usuario?</strong
+                >
+              </p>
+              <label
+                ><input type="radio" name="q2" value="Django" /> Django</label
+              >
+              <label
+                ><input type="radio" name="q2" value="React" /> React</label
+              >
+              <label
+                ><input type="radio" name="q2" value="Laravel" /> Laravel</label
+              >
+              <label
+                ><input type="radio" name="q2" value="Flask" /> Flask</label
+              >
+            </div>
+            <button class="next-btn" onclick="nextStep(1)">Siguiente</button>
+          </section>
+
+          <!-- Paso 2 -->
+          <section class="question-section" id="step-2" style="display: none">
+            <div class="question">
+              <p>
+                <strong
+                  >3. ¿Qué propiedad CSS se utiliza para cambiar el color del
+                  texto?</strong
+                >
+              </p>
+              <label
+                ><input type="radio" name="q3" value="background-color" />
+                background-color</label
+              >
+              <label
+                ><input type="radio" name="q3" value="font-style" />
+                font-style</label
+              >
+              <label
+                ><input type="radio" name="q3" value="color" /> color</label
+              >
+              <label
+                ><input type="radio" name="q3" value="text-align" />
+                text-align</label
+              >
+            </div>
+            <div class="question">
+              <p>
+                <strong
+                  >4. ¿Qué protocolo se usa comúnmente para transferir datos
+                  entre cliente y servidor en aplicaciones web?</strong
+                >
+              </p>
+              <label><input type="radio" name="q4" value="SMTP" /> SMTP</label>
+              <label><input type="radio" name="q4" value="FTP" /> FTP</label>
+              <label><input type="radio" name="q4" value="HTTP" /> HTTP</label>
+              <label><input type="radio" name="q4" value="SSH" /> SSH</label>
+            </div>
+            <button class="next-btn" onclick="nextStep(2)">Siguiente</button>
+          </section>
+
+          <!-- Paso 3 -->
+          <section class="question-section" id="step-3" style="display: none">
+            <div class="question">
+              <p><strong>5. ¿Qué hace una API RESTful?</strong></p>
+              <label
+                ><input
+                  type="radio"
+                  name="q5"
+                  value="Sirve archivos estáticos"
+                />
+                Sirve archivos estáticos</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q5"
+                  value="Proporciona una interfaz para bases de datos relacionales"
+                />
+                Proporciona una interfaz para bases de datos relacionales</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q5"
+                  value="Permite la comunicación entre sistemas usando HTTP"
+                />
+                Permite la comunicación entre sistemas usando HTTP</label
+              >
+              <label
+                ><input type="radio" name="q5" value="Es un servidor web" /> Es
+                un servidor web</label
+              >
+            </div>
+            <div class="question">
+              <p>
+                <strong
+                  >6. ¿Cuál es una ventaja del uso de Flexbox en CSS?</strong
+                >
+              </p>
+              <label
+                ><input
+                  type="radio"
+                  name="q6"
+                  value="Mejora la seguridad del sitio"
+                />
+                Mejora la seguridad del sitio</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q6"
+                  value="Facilita la alineación de elementos en un contenedor"
+                />
+                Facilita la alineación de elementos en un contenedor</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q6"
+                  value="Aumenta el tamaño del archivo CSS"
+                />
+                Aumenta el tamaño del archivo CSS</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q6"
+                  value="Permite crear bases de datos"
+                />
+                Permite crear bases de datos</label
+              >
+            </div>
+            <button class="next-btn" onclick="nextStep(3)">Siguiente</button>
+          </section>
+
+          <!-- Paso 4 -->
+          <section class="question-section" id="step-4" style="display: none">
+            <div class="question">
+              <p>
+                <strong
+                  >7. ¿Qué herramienta se usa comúnmente para el control de
+                  versiones?</strong
+                >
+              </p>
+              <label
+                ><input type="radio" name="q7" value="MySQL" /> MySQL</label
+              >
+              <label><input type="radio" name="q7" value="Git" /> Git</label>
+              <label><input type="radio" name="q7" value="PHP" /> PHP</label>
+              <label><input type="radio" name="q7" value="XML" /> XML</label>
+            </div>
+            <div class="question">
+              <p>
+                <strong
+                  >8. ¿Cuál de las siguientes opciones es una buena práctica de
+                  desarrollo web?</strong
+                >
+              </p>
+              <label
+                ><input
+                  type="radio"
+                  name="q8"
+                  value="Usar !important en todos los estilos"
+                />
+                Usar !important en todos los estilos</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q8"
+                  value="Escribir todo el código en un solo archivo"
+                />
+                Escribir todo el código en un solo archivo</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q8"
+                  value="Optimizar imágenes para reducir el tiempo de carga"
+                />
+                Optimizar imágenes para reducir el tiempo de carga</label
+              >
+              <label
+                ><input type="radio" name="q8" value="No usar comentarios" /> No
+                usar comentarios</label
+              >
+            </div>
+            <button class="next-btn" onclick="nextStep(4)">Siguiente</button>
+          </section>
+
+          <!-- Paso 5 -->
+          <section class="question-section" id="step-5" style="display: none">
+            <div class="question">
+              <p>
+                <strong>9. ¿Qué es una SPA (Single Page Application)?</strong>
+              </p>
+              <label
+                ><input
+                  type="radio"
+                  name="q9"
+                  value="Un sitio web con múltiples páginas HTML"
+                />
+                Un sitio web con múltiples páginas HTML</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q9"
+                  value="Una aplicación que se carga completamente al inicio y luego usa JavaScript para navegar"
+                />
+                Una aplicación que se carga completamente al inicio y luego usa
+                JavaScript para navegar</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q9"
+                  value="Un servidor de archivos estáticos"
+                />
+                Un servidor de archivos estáticos</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q9"
+                  value="Una base de datos local"
+                />
+                Una base de datos local</label
+              >
+            </div>
+            <div class="question">
+              <p>
+                <strong
+                  >10. ¿Qué función cumple un archivo .env en una aplicación
+                  web?</strong
+                >
+              </p>
+              <label
+                ><input type="radio" name="q10" value="Almacena estilos CSS" />
+                Almacena estilos CSS</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q10"
+                  value="Contiene código JavaScript"
+                />
+                Contiene código JavaScript</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q10"
+                  value="Guarda variables de entorno confidenciales"
+                />
+                Guarda variables de entorno confidenciales</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q10"
+                  value="Crea rutas para la API"
+                />
+                Crea rutas para la API</label
+              >
+            </div>
+            <button class="submit-btn" id="finalizar">
+              Enviar evaluación
+            </button>
+
+          </section>
+
+          <!-- Mensaje final -->
+          <section
+            class="question-section"
+            id="final-msg"
+            style="display: none"
+          >
+            <h2>¡Gracias por completar tu examen!</h2>
+            <p>
+              Está al pendiente de tu puntuación y si pasaste a la siguiente
+              etapa.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div><script>
+  function toggleMenu() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  // Cierra el menú al hacer clic fuera
+  document.addEventListener("click", function (event) {
+    const menu = document.getElementById("dropdownMenu");
+    const icon = document.querySelector(".user-icon");
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+      menu.style.display = "none";
+    }
+  });
+
+ 
+</script>
+
+    <script type="module" src="lib/js/examWeb.js"></script>
+  </body>
+</html>

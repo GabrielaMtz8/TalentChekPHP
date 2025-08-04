@@ -1,0 +1,10 @@
+{
+    "name": "equipo/talentchek",
+    "autoload": {
+        "psr-4": {
+            "Equipo\\Talentchek\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}

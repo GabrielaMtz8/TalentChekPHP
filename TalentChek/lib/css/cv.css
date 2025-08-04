@@ -1,0 +1,118 @@
+body {
+  background: #f5f8ff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0 0.3rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.cv-upload {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-upload {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.cv-filename {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center; /* <-- Cambiado de flex-start a center */
+  margin-bottom: 1.5rem;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+input[type="checkbox"] {
+  margin-top: 0.2rem;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #1e4fd2;
+}
+
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  color: #1a3fad;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 24px;
+  height: 24px;
+}
+
+.nomSistema{
+  color: #001b6c;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

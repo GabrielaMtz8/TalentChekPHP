@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="lib/img/logoredondo.png" />
+    <title>Claves de Psicométrico</title>
+    <link rel="stylesheet" href="lib/css/perfilReclutador.css" />
+    <link rel="stylesheet" href="lib/css/crudClavePsico.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-layout">
+      <header class="main-header">
+        <a href="perfilAdm.html" class="header-left">
+          <img src="lib/img/logo.jpg" alt="Logo" />
+          <span class="title">TalentCheck</span>
+        </a>
+        <div class="user-menu">
+          <span class="user-icon" onclick="toggleMenu()">👤</span>
+          <div id="dropdownMenu" class="dropdown">
+            <a href="#" id="logoutBtn">Cerrar sesión</a>
+            <a href="perfilAd.html">Ver Perfil</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <aside class="sidebar">
+          <nav class="nav">
+            <a href="crudClavesCono.html"
+              ><button class="nav-btn">
+                <i class="fas fa-clipboard-check"></i></button
+            ></a>
+            <a href="crudClavesPsico.html"
+              ><button class="nav-btn"><i class="fas fa-brain"></i></button
+            ></a>
+          </nav>
+        </aside>
+
+        <main class="panel">
+          <section class="panel-content">
+            <center>
+              <h1>Claves de Acceso para el Examen Psicométrico</h1>
+            </center>
+            <br />
+            <button onclick="abrirModalAgregar()" style="margin-bottom: 20px">
+              Agregar clave
+            </button>
+            <table id="tablaClaves">
+              <thead>
+                <tr>
+                  <th>Plataforma</th>
+                  <th>Clave</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- Modales -->
+    <div class="modal-backdrop" id="modalEdit">
+      <div class="modal">
+        <p>Editar clave:</p>
+        <input id="modalEditInput" type="text" placeholder="Nueva clave" />
+        <div class="modal-buttons">
+          <button class="modal-button accept" id="modalEditAccept">
+            Guardar
+          </button>
+          <button class="modal-button cancel" id="modalEditCancel">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="modalAdd">
+      <div class="modal">
+        <p>Nombre de la clave:</p>
+        <input id="modalAddNombre" type="text" />
+        <p>Valor de la clave:</p>
+        <input id="modalAddValor" type="text" />
+        <div class="modal-buttons">
+          <button class="modal-button accept" id="modalAddAccept">
+            Agregar
+          </button>
+          <button class="modal-button cancel" id="modalAddCancel">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="modalDelete">
+      <div class="modal">
+        <p>¿Estás seguro que deseas eliminar esta clave?</p>
+        <div class="modal-buttons">
+          <button class="modal-button accept" id="modalDeleteAccept">Sí</button>
+          <button class="modal-button cancel" id="modalDeleteCancel">No</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="lib/js/crudClavesPsico.js"></script>
+  </body>
+</html>
