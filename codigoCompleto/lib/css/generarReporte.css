@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f8ff;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Encabezado horizontal */
+.main-header {
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-left img {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1a3fad;
+}
+
+.header-right .user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+/* Contenedor principal bajo el encabezado */
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #ffffff;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  border-right: 1px solid #ddd;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #1a3fad;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn.active {
+  color: #ffffff;
+  background-color: #1a3fad;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* PANEL */
+.panel {
+  flex: 1;
+  background-color: #eaf0ff;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CENTRAR FORMULARIO EN PANEL */
+.panel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* FORMULARIO */
+.reporte-form {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.reporte-form label {
+  font-weight: bold;
+  color: #003366;
+}
+
+.reporte-form input,
+.reporte-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.reporte-form button {
+  background: #3366cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.reporte-form button:hover {
+  background: #254e9e;
+}
+
+.dashboard {
+  flex: 1;
+  padding: 30px;
+  background: #e5efff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+    .user-menu {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      user-select: none;
+    }
+    .user-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width: 140px;
+      z-index: 1000;
+    }
+    .dropdown a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #eee;
+    }
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+    .dropdown a:hover {
+      background-color: #007bff;
+      color: white;
+    }

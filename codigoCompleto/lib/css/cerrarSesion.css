@@ -1,0 +1,74 @@
+/* Fondo transparente para el body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: transparent;
+}
+
+/* Capa semitransparente que oscurece el fondo */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro y transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal centrado */
+.modal {
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.modal p {
+  color: #333;
+  font-size: 16px;
+}
+
+/* Botones */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-aceptar {
+  background-color: #005a9e;
+  color: white;
+  border: 2px solid #0078d7;
+}
+
+.btn-aceptar:hover {
+  background-color: #0078d7;
+}
+
+.btn-cancelar {
+  background-color: #d6eaff;
+  color: #003366;
+}
+
+.btn-cancelar:hover {
+  background-color: #b3d7f5;
+}

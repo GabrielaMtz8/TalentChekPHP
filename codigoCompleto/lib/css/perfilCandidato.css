@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f8ff;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-header {
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-left img {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1a3fad;
+}
+
+.header-right .user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 60px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #1a3fad;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn.active {
+  color: #ffffff;
+  background-color: #1a3fad;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.panel {
+  flex: 1;
+  background-color: #eaf0ff;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.panel-content h1 {
+  font-size: 26px;
+  color: #1a3fad;
+  margin-bottom: 15px;
+}
+
+.panel-content p {
+  color: #444;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.user-menu {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      user-select: none;
+    }
+    .user-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width: 140px;
+      z-index: 1000;
+    }
+    .dropdown a {
+      display: block;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #eee;
+    }
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+    .dropdown a:hover {
+      background-color: #007bff;
+      color: white;
+    }
+    
