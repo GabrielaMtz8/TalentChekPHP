@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="lib/img/logoredondo.png" />
+    <title>Examen de Conocimiento</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="lib/css/examenCono.css" />
+  </head>
+  <body>
+    <div class="main-layout">
+      <header class="main-header">
+      <a href="perfilCandidato.html" class="header-left">
+        <img src="lib/img/logo.jpg" alt="Logo" />
+        <span class="title">TalentCheck</span>
+      </a>
+       <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="lib/php/cerrarSesion.php">Cerrar sesión</a>
+        <a href="perfil.html">Ver Perfil</a>
+      </div>
+      </div>
+    </header>
+      <div class="container">
+        <aside class="sidebar">
+          <nav class="nav">
+            <a href="perfilCandidato.html"
+              ><button class="nav-btn"><i class="fas fa-home"></i></button
+            ></a>
+           
+            <a href="examenCono.html"
+              ><button class="nav-btn">
+                <i class="fas fa-clipboard-list"></i></button
+            ></a>
+            <a href="examenPsico.html"
+              ><button class="nav-btn"><i class="fas fa-brain"></i></button
+            ></a>
+          </nav>
+        </aside>
+
+        <main class="exam-content">
+          <!-- Video de cámara -->
+          <div id="video-container">
+            <video id="video" width="100" height="80" autoplay muted></video>
+          </div>
+
+          <!-- Paso: Introducción -->
+          <section class="intro-section" id="intro">
+            <div class="robot-box">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4712/4712107.png"
+                class="robot-img"
+                alt="Robot"
+              />
+            </div>
+            <h2>Evaluación de Conocimiento</h2>
+            <button class="camera-btn" id="camara" onclick="activarCamara()">
+              <i class="fas fa-video"></i> Encender cámara
+            </button>
+            <button
+              class="start-btn"
+              id="startBtn"
+              onclick="startEvaluation()"
+              disabled
+            >
+              Iniciar evaluación
+            </button>
+            <p class="camera-warning">
+              * Debes permitir el acceso a la cámara para comenzar el examen.
+            </p>
+          </section>
+
+          <!-- Paso 1 -->
+          <section class="question-section" id="step-1" style="display: none">
+            <div class="question">
+              <p>
+                <strong>
+                  1. ¿Cuál es un sistema de gestión de bases de datos
+                  relacional?</strong
+                >
+              </p>
+              <label
+                ><input type="radio" name="q1" value="MongoDB" /> MongoDB</label
+              >
+              <label
+                ><input type="radio" name="q1" value="Redis" /> Redis</label
+              >
+              <label><input type="radio" name="q1" value="Dart" /> MySQL</label>
+              <label
+                ><input type="radio" name="q1" value="Elasticsearch" />
+                Elasticsearch</label
+              >
+            </div>
+            <div class="question">
+              <p>
+                <strong>
+                  2. ¿Qué comando SQL se utiliza para obtener datos de una
+                  tabla?</strong
+                >
+              </p>
+              <label
+                ><input type="radio" name="q2" value="UPDATE" /> UPDATE</label
+              >
+              <label
+                ><input type="radio" name="q2" value="SELECT" /> SELECT</label
+              >
+              <label
+                ><input type="radio" name="q2" value="INSERT" /> INSERT</label
+              >
+              <label
+                ><input type="radio" name="q2" value="INSERT" /> INSERT</label
+              >
+            </div>
+            <button class="next-btn" onclick="nextStep(1)">Siguiente</button>
+          </section>
+
+          <!-- Paso 2 -->
+          <section class="question-section" id="step-2" style="display: none">
+            <div class="question">
+              <p><strong> 3. ¿Qué tipo de base de datos es MongoDB?</strong></p>
+              <label
+                ><input type="radio" name="q3" value="Relacional" />
+                Relacional</label
+              >
+              <label
+                ><input type="radio" name="q3" value="NoSQL" /> NoSQL</label
+              >
+              <label
+                ><input type="radio" name="q3" value="Clásica" /> Clásica</label
+              >
+              <label
+                ><input type="radio" name="q3" value="Distribuida" />
+                Distribuida</label
+              >
+            </div>
+            <div class="question">
+              <p>
+                <strong>
+                  4. ¿Cuál es la función de un índice en una base de
+                  datos?</strong
+                >
+              </p>
+              <label
+                ><input
+                  type="radio"
+                  name="q4"
+                  value="Aumentar el tamaño de la tabla"
+                />
+                Aumentar el tamaño de la tabla</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="q4"
+                  value="Reducir el tiempo de respuesta de las consultas"
+                />
+                Reducir el tiempo de respuesta de las consultas</label
+              >
+              <label
+                ><input type="radio" name="q4" value="Eliminar duplicados" />
+                Eliminar duplicados</label
+              >
+              <label
+                ><input type="radio" name="q4" value="Comprimir registros" />
+                Comprimir registros</label
+              >
+            </div>
+            <button class="next-btn" onclick="nextStep(2)">Siguiente</button>
+          </section>
+
+          <!-- Paso 3 -->
+          <section class="question-section" id="step-3" style="display: none">
+            <div class="question">
+              <p>
+                <strong>
+                  5. ¿Qué significa la sigla ACID en bases de datos?</strong
+                >
+              </p>
+              <label>
+                <input
+                  type="radio"
+                  name="q5"
+                  value="Atomicidad, Consistencia, Aislamiento, Durabilidad"
+                />
+                Atomicidad, Consistencia, Aislamiento, Durabilidad
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="q5"
+                  value="Aceleración, Control, Integridad, Datos"
+                />
+                Aceleración, Control, Integridad, Datos
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="q5"
+                  value="Actualización, Compresión, Identificación, Depuración"
+                />
+                Actualización, Compresión, Identificación, Depuración
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="q5"
+                  value="Ninguna de las anteriores"
+                />
+                Ninguna de las anteriores
+              </label>
+            </div>
+            <div class="question">
+              <p>
+                <strong>
+                  6. ¿Cuál es una buena práctica para realizar respaldos de base
+                  de datos?</strong
+                >
+              </p>
+              <label>
+                <input
+                  type="radio"
+                  name="q6"
+                  value="Hacer copias manuales esporádicas"
+                />
+                Hacer copias manuales esporádicas
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="q6"
+                  value="Usar comandos de eliminación antes de copiar"
+                />
+                Usar comandos de eliminación antes de copiar
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="q6"
+                  value="Automatizar los respaldos diarios"
+                />
+                Automatizar los respaldos diarios
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="q6"
+                  value="Desactivar las restricciones de integridad"
+                />
+                Desactivar las restricciones de integridad
+              </label>
+            </div>
+            <button class="next-btn" onclick="nextStep(3)">Siguiente</button>
+          </section>
+
+          <!-- Paso 4 -->
+          <section class="question-section" id="step-4" style="display: none">
+            <div class="question">
+              <p>
+                <strong>
+                  7. ¿Qué lenguaje se usa para consultar bases de datos
+                  SQL?</strong
+                >
+              </p>
+              <label><input type="radio" name="q7" value="HTML" /> HTML</label>
+              <label><input type="radio" name="q7" value="JSON" /> JSON</label>
+              <label><input type="radio" name="q7" value="SQL" /> SQL</label>
+              <label><input type="radio" name="q7" value="XML" /> XML</label>
+            </div>
+            <div class="question">
+              <p>
+                <strong>
+                  8. ¿Qué herramienta permite monitorear bases de datos en
+                  tiempo real?</strong
+                >
+              </p>
+              <label>
+                <input type="radio" name="q8" value="WordPress" /> WordPress
+              </label>
+              <label>
+                <input type="radio" name="q8" value="Grafana" /> Grafana
+              </label>
+              <label>
+                <input type="radio" name="q8" value="Notepad++" /> Notepad++
+              </label>
+              <label>
+                <input type="radio" name="q8" value="Photoshop" /> Photoshop
+              </label>
+            </div>
+            <button class="next-btn" onclick="nextStep(4)">Siguiente</button>
+          </section>
+
+          <!-- Paso 5 -->
+          <section class="question-section" id="step-5" style="display: none">
+            <div class="question">
+              <p>
+                <strong> 9. ¿Cuál es el propósito de la normalización?</strong>
+              </p>
+              <label>
+                <input
+                  type="radio"
+                  name="q9"
+                  value="Reducir la redundancia de datos"
+                />
+                Reducir la redundancia de datos
+              </label>
+              <label>
+                <input type="radio" name="q9" value="Crear claves foráneas" />
+                Crear claves foráneas
+              </label>
+              <label>
+                <input type="radio" name="q9" value="Eliminar índices" />
+                Eliminar índices
+              </label>
+              <label>
+                <input type="radio" name="q9" value="Comprimir las tablas" />
+                Comprimir las tablas
+              </label>
+            </div>
+            <div class="question">
+              <p>
+                <strong>
+                  10. ¿Qué tipo de base de datos usarías para almacenar
+                  documentos en formato JSON?</strong
+                >
+              </p>
+              <label
+                ><input type="radio" name="q10" value="PostgreSQL" />
+                PostgreSQL</label
+              >
+              <label
+                ><input type="radio" name="q10" value="Oracle" /> Oracle</label
+              >
+              <label
+                ><input type="radio" name="q10" value="MongoDB" />
+                MongoDB</label
+              >
+              <label
+                ><input type="radio" name="q10" value="MariaDB" />
+                MariaDB</label
+              >
+            </div>
+          <button class="submit-btn" id="finalizar">
+              Enviar evaluación
+            </button>
+          </section>
+
+          <!-- Mensaje final -->
+          <section
+            class="question-section"
+            id="final-msg"
+            style="display: none"
+          >
+            <h2>¡Gracias por completar tu examen!</h2>
+            <p>
+              Está al pendiente de tu puntuación y si pasaste a la siguiente
+              etapa.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  // Cierra el menú al hacer clic fuera
+  document.addEventListener("click", function (event) {
+    const menu = document.getElementById("dropdownMenu");
+    const icon = document.querySelector(".user-icon");
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+      menu.style.display = "none";
+    }
+  });
+
+ 
+</script>
+
+    <script type="module" src="lib/js/examenBd.js"></script>
+  </body>
+</html>
