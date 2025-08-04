@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="lib/img/logoredondo.png">
+  <title>Perfil Administrador</title>
+  <link rel="stylesheet" href="lib/css/perfilReclutador.css" />
+  <link rel="stylesheet" href="lib/css/crudCandidatos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div class="main-layout">
+  <header class="main-header">
+    <a href="perfilAdm.html" class="header-left" style="text-decoration: none; color: inherit;">
+      <img src="lib/img/logo.jpg" alt="Logo" />
+      <span class="title">TalentCheck</span>
+    </a>
+    <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="#" id="logoutBtn">Cerrar sesión</a>
+        <a href="perfilAd.html">Ver Perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <nav class="nav">
+        <a href="crudClavesCono.html"><button class="nav-btn"><i class="fas fa-clipboard-check"></i></button></a>
+        <a href="crudClavesPsico.html"><button class="nav-btn"><i class="fas fa-brain"></i></button></a>
+      </nav>
+    </aside>
+
+    <main class="panel">
+      <section class="panel-content">
+        <h1>Panel del Administrador</h1>
+        <p>Bienvenido</p>
+      </section>
+    </main>
+  </div>
+</div>
+</body>
+</html>

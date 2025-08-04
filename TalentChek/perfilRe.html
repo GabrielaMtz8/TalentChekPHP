@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="lib/img/logoredondo.png">
+  <title>Perfil del Reclutador</title>
+  <link rel="stylesheet" href="lib/css/perfil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="main-header">
+    <a href="perfilReclutador.html" class="header-left">
+      <img src="lib/img/logo.jpg" alt="Logo" />
+      <span class="title">TalentCheck</span>
+    </a>
+    <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="lib/php/cerrarSesion.php">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <h1>Perfil del Reclutador</h1>
+    <div class="profile-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Foto de perfil" class="profile-avatar">
+      <div class="profile-info">
+        <p><strong>Nombre Completo:</strong> <span id="nombreReclutador">Cargando...</span></p>
+        <p><strong>Correo:</strong> <span id="correoReclutador">Cargando...</span></p>
+        <p><strong>Tipo:</strong> <span id="tipoReclutador">Cargando...</span></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="lib/js/menuDespegable.js"></script>
+  <script type="module" src="lib/js/perfilRe.js"></script>
+</body>
+</html>

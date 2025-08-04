@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="lib/img/logoredondo.png">
+  <title>Perfil Candidato</title>
+  <link rel="stylesheet" href="lib/css/perfilCandidato.css"/>
+  <link rel="stylesheet" href="lib/css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="main-layout">
+    <!-- Encabezado -->
+    <header class="main-header">
+      <a href="perfilCandidato.html" class="header-left">
+        <img src="lib/img/logo.jpg" alt="Logo" />
+        <span class="title">TalentCheck</span>
+      </a>
+      <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="lib/php/cerrarSesion.php">Cerrar sesión</a>
+        <a href="perfil.html">Ver Perfil</a>
+      </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="nav">
+          <a href="perfilCandidato.html"><button class="nav-btn"><i class="fas fa-home"></i></button></a>
+         
+          <a href="examenCono.php"><button class="nav-btn"><i class="fas fa-clipboard-list"></i></button></a>
+          <a href="examenPsico.html"><button class="nav-btn"><i class="fas fa-brain"></i></button></a>
+        </nav>
+      </aside>
+
+      <!-- Panel principal -->
+      <main class="panel">
+        <section class="panel-content">
+          <h1>¡Bienvenido, <span id="candidateName">Candidato</span>!</h1>
+          <p>Este es tu panel personal para administrar tu proceso de reclutamiento.</p>
+        </section>
+        <main class="main-content" id="main-content">
+      <h1>Oportunidades laborales</h1>
+      <div class="job-grid">
+        <a href="formulario_cv.php?puesto=Desarrollador Web" class="job-card">
+          <i class="fas fa-laptop-code"></i>
+          <h2>Desarrollador Web</h2>
+          <p>
+            Construcción y mantenimiento de sitios y aplicaciones web modernas.
+          </p>
+        </a>
+
+        <a href="formulario_cv.php?puesto=Desarrollador Móvil" class="job-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h2>Desarrollador Móvil</h2>
+          <p>Creación de apps para Android y iOS con Flutter o React Native.</p>
+        </a>
+
+        <a href="formulario_cv.php?puesto=Administrador de BD" class="job-card">
+          <i class="fas fa-database"></i>
+          <h2>Administrador de BD</h2>
+          <p>Gestión, respaldo y optimización de bases de datos SQL/NoSQL.</p>
+        </a>
+      </div>
+    </main>
+    </div>
+  </div>
+<script src="lib/js/menuDespegable.js"></script>
+</body>
+</html>

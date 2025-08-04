@@ -1,0 +1,331 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f8ff;
+  overflow: auto;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ENCABEZADO */
+.main-header {
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-left img {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1a3fad;
+}
+
+.header-right .user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 60px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #1a3fad;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn.active {
+  color: #ffffff;
+  background-color: #1a3fad;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* PANEL PRINCIPAL */
+.panel {
+  flex: 1;
+  background-color: #eaf0ff;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* FORMULARIO CENTRALIZADO */
+.panel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* FORMULARIO DE REPORTE */
+.reporte-form {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reporte-form label {
+  font-weight: bold;
+  color: #003366;
+}
+
+.reporte-form input,
+.reporte-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.reporte-form button {
+  background: #3366cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.reporte-form button:hover {
+  background: #254e9e;
+}
+
+/* DASHBOARD */
+.dashboard {
+  flex: 1;
+  padding: 30px;
+  background: #e5efff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* FORMULARIO DE ENTREVISTA */
+.entrevista-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+}
+
+.entrevista-form label {
+  font-weight: bold;
+  color: #003366;
+}
+
+.entrevista-form input,
+.entrevista-form textarea,
+.entrevista-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btn-monitoreo,
+.btn-guardar {
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-monitoreo {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-monitoreo:hover {
+  background-color: #1e7e34;
+}
+
+.btn-guardar {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-guardar:hover {
+  background-color: #0056b3;
+}
+
+/* MEDIA QUERIES RESPONSIVAS */
+@media (max-width: 1024px) {
+
+  .panel,
+  .dashboard {
+    padding: 20px;
+  }
+
+  .entrevista-form,
+  .reporte-form {
+    padding: 20px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .header-left .title {
+    font-size: 16px;
+  }
+
+  .sidebar {
+    width: 60px;
+    padding-top: 20px;
+  }
+
+  .nav-btn {
+    font-size: 16px;
+  }
+
+  .entrevista-form,
+  .reporte-form {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .btn-monitoreo,
+  .btn-guardar {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Estilos para el menú desplegable del usuario */
+.user-menu {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  user-select: none;
+}
+
+.user-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 140px;
+  z-index: 1000;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 12px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown a:last-child {
+  border-bottom: none;
+}
+
+.dropdown a:hover {
+  background-color: #007bff;
+  color: white;
+}

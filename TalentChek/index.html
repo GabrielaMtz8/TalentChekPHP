@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="lib/img/logoredondo.png" />
+    <title>TalentCheck</title>
+    <link rel="stylesheet" href="lib/css/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo-header">
+        <img src="lib/img/logo.jpg" alt="Logo" />
+        <span class="nomSistema">TalentCheck</span>
+      </div>
+      <div class="header-right">
+        <a href="registrar.html" class="login-icon" title="Iniciar sesión">
+          <i class="fas fa-user-circle"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="main-content" id="main-content">
+      <h1>Oportunidades laborales</h1>
+      <div class="job-grid">
+        <a href="formulario_cv.php?puesto='Desarrollador Web'" class="job-card">
+          <i class="fas fa-laptop-code"></i>
+          <h2>Desarrollador Web</h2>
+          <p>
+            Construcción y mantenimiento de sitios y aplicaciones web modernas.
+          </p>
+        </a>
+
+        <a href="formulario_cv.php?puesto='Desarrollador Movil'" class="job-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h2>Desarrollador Móvil</h2>
+          <p>Creación de apps para Android y iOS con Flutter o React Native.</p>
+        </a>
+
+        <a href="formulario_cv.php?puesto='Desarrollador BD'" class="job-card">
+          <i class="fas fa-database"></i>
+          <h2>Administrador de BD</h2>
+          <p>Gestión, respaldo y optimización de bases de datos SQL/NoSQL.</p>
+        </a>
+      </div>
+    </main>
+    <script type="module" src="lib/js/index.js"></script>
+  </body>
+</html>
