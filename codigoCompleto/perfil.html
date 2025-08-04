@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="lib/img/logoredondo.png">
+  <title>Ver Perfil</title>
+  <link rel="stylesheet" href="lib/css/perfil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="main-header">
+    <a href="perfilCandidato.html" class="header-left">
+      <img src="lib/img/logo.jpg" alt="Logo" />
+      <span class="title">TalentCheck</span>
+    </a>
+    <div class="user-menu">
+      <span class="user-icon" onclick="toggleMenu()">👤</span>
+      <div id="dropdownMenu" class="dropdown">
+        <a href="lib/php/cerrarSesion.php" id="logoutBtn">Cerrar sesión</a>
+        <a href="perfil.html">Ver Perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <h1>Perfil del Candidato</h1>
+    <div class="profile-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Foto de perfil" class="profile-avatar">
+      <div class="profile-info">
+        <p><strong>Nombre Completo:</strong> <span id="nombreCandidato">Cargando...</span></p>
+        <p><strong>Correo:</strong> <span id="correoCandidato">Cargando...</span></p>
+        <p><strong>Teléfono:</strong> <span id="telefonoCandidato">Cargando...</span></p>
+        <p><strong>Puesto:</strong> <span id="puestoCandidato">Cargando...</span></p>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="lib/js/perf.js"></script>
+  <script src="lib/js/menuDespegable.js"></script>
+</body>
+</html>

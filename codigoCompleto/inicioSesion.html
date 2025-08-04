@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="lib/img/logoredondo.png" />
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="lib/css/inicioSesion.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <a href="registrar.html" style="text-decoration: none; color: inherit">
+          <div class="logo">
+            <img src="lib/img/logo.jpg" alt="Check icon" />
+            <span class="nomSistema">TalentCheck</span>
+          </div>
+        </a>
+        <h2>Iniciar sesión</h2>
+
+        <!-- Formulario corregido -->
+        <form id="loginForm" action="lib/php/inicioSesion.php" method="POST">
+          <input
+            type="email"
+            name="cue"
+            placeholder="CUE"
+            required
+          />
+          <input
+            type="password"
+            name="match"
+            placeholder="MATCH"
+            required
+          />
+          <button type="submit">Iniciar sesión</button>
+          <div class="forgot-password">
+            <p>¿No tienes cuenta?</p>
+            <a href="registrar.html">Crear Cuenta</a>
+          </div>
+        </form>
+      </div>
+      <div class="illustration">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+          alt="User Illustration"
+        />
+      </div>
+    </div>
+  </body>
+</html>

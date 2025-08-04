@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="lib/img/logoredondo.png" />
+    <title>Modificar Datos</title>
+    <link rel="stylesheet" href="lib/css/modificar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-layout">
+      <header class="main-header">
+        <a href="perfilCandidato.html" class="header-left">
+          <img src="lib/img/logo.jpg" alt="Logo" />
+          <span class="title">TalentCheck</span>
+        </a>
+        <div class="user-menu">
+          <span class="user-icon" onclick="toggleMenu()">👤</span>
+          <div id="dropdownMenu" class="dropdown">
+            <a href="#" id="logoutBtn">Cerrar sesión</a>
+            <a href="perfil.html">Ver Perfil</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <aside class="sidebar">
+          <nav class="nav">
+            <a href="perfilCandidato.html"
+              ><button class="nav-btn"><i class="fas fa-home"></i></button
+            ></a>
+            <a href="modificar.html"
+              ><button class="nav-btn"><i class="fas fa-edit"></i></button
+            ></a>
+            <a href="proceso.html"
+              ><button class="nav-btn">
+                <i class="fas fa-spinner fa-spin"></i></button
+            ></a>
+            <a href="acceso.html"
+              ><button class="nav-btn">
+                <i class="fas fa-clipboard-list"></i></button
+            ></a>
+            <a href="accesodos.html"
+              ><button class="nav-btn"><i class="fas fa-brain"></i></button
+            ></a>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <section class="form-section">
+            <h2>Modificar Información Personal</h2>
+            <form class="edit-form">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" required />
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" required />
+              </div>
+
+              <button type="submit" class="btn-guardar">Guardar cambios</button>
+            </form>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="lib/js/modificar.js"></script>
+  </body>
+</html>
